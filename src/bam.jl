@@ -14,7 +14,7 @@ function process_records!( reader::BAM.Reader, seqname::String, range::UnitRange
             exoncount += 1
          end
          # if is spliced process splice sites
-         if isspliced(rec) && strand == strandpos(rec)
+         if isspliced(rec) ## && strand == strandpos(rec)
             known = process_spliced_record!( novelacc, noveldon, rec, known, oneknown )
          end
       end
